@@ -13,8 +13,8 @@
 
 | Name                          | Value Type      | Description                          |
 |-------------------------------| ----------------| -------------------------------------|
-| CLOUDFRONT_ACCESS_KEY_ID      | String          | Cloudfront Public KeyID              |
 | CLOUDFRONT_ORIGIN             | String          | Cloudfront CDN Domain                |
+| CLOUDFRONT_ACCESS_KEY_ID      | String          | Cloudfront Public KeyID              |
 | CLOUDFRONT_PRIVATE_KEY_BASE64 | String          | Cloudfront Generated Private Key     |
 | EXPIRE_TIME                   | String          | Signature URL Expiry Time, e.g. (2h) |
 
