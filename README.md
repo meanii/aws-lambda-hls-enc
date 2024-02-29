@@ -7,8 +7,9 @@
    - Runtime: `Amazon Linux 2`
    - Architecture: `arm64`
 
+2. Deploy the compiled and zipped file to Lambda, using the artifacts from this [release](https://github.com/meanii/aws-lambda-hls-enc/releases).
 
-2. Now, you need to configure a few environment variables.
+3. Now, you need to configure a few environment variables.
 
 | Name                          | Value Type      | Description                          |
 |-------------------------------| ----------------| -------------------------------------|
