@@ -18,3 +18,15 @@
 | CLOUDFRONT_PRIVATE_KEY_BASE64 | String          | Cloudfront Generated Private Key     |
 | EXPIRE_TIME                   | String          | Signature URL Expiry Time, e.g. (2h) |
 
+4. IMPORTANT: To ensure the entire process functions correctly, it is necessary to pre-sign your master.m3u8 file with the corresponding CDN origin URL. Subsequently, update the domain to the deployed Lambda function.
+
+Example:
+
+1. Pre-sign your master.m3u8 file with the CDN origin URL:
+- Original URL: `https://cdn-origin.com/master.m3u8`
+- Pre-signed URL: `https://cdn-origin.com/master.m3u8?Expires=1610000000&Signature=xxxx&Key-Pair-Id=xxxx`
+
+2. After deploying the Lambda function, update the domain to the Lambda function URL:
+- Updated URL: `https://your-lambda-function-url/master.m3u8?Expires=1610000000&Signature=xxxx&Key-Pair-Id=xxxx`
+
+Ensure to follow these steps for seamless integration with the Lambda function.
