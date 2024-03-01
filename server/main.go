@@ -65,8 +65,8 @@ func HandleRequest(w http.ResponseWriter, r *http.Request) {
 	p, listType, err := m3u8.DecodeFrom(m3u8Resp.Body, true)
 	if err != nil {
 		fmt.Printf("Error decoding m3u8: %s\n", err)
-		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte(fmt.Sprintf("Error decoding m3u8: %s\n", err)))
+		w.WriteHeader(http.StatusGone)
+		w.Write([]byte("The provided URL might be expired Or url signed with the incorrect credentials."))
 		return
 	}
 
